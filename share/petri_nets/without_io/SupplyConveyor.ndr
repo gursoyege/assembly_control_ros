@@ -1,0 +1,11 @@
+t 150.0 25.0 t22 0 w n
+t 150.0 165.0 SC_On w 0 w n SC_ON e
+p 70.0 95.0 {SC_On } 1 w SC_ON e
+p 225.0 100.0 Sc_Off 0 e
+e {SC_On } SC_On 1 n
+e SC_On Sc_Off 1 n
+e Sc_Off t22 1 n
+e t22 {SC_On } 1 n
+h SupplyConveyor
+
+

@@ -1,0 +1,21 @@
+t 240.0 265.0 t25 c 0 w n CAM_DONE e
+p 240.0 195.0 p35 0 e CAM_PROCESSING ne
+t 365.0 335.0 CAM_Part1 ne 0 w n CAM_PART1 e
+t 100.0 335.0 CAM_Part3 ne 0 w n CAM_PART3 w
+t 240.0 410.0 CAM_Part2 ne 0 w n CAM_PART2 e
+p 240.0 50.0 CamWait 1 n
+t 240.0 125.0 t26 0 w n
+p 240.0 335.0 p45 0 ne
+e CamWait t26 1 n
+e t26 p35 1 n
+e p35 t25 1 n
+e t25 p45 1 n
+e p45 CAM_Part3 1 n
+e p45 CAM_Part2 1 n
+e p45 CAM_Part1 1 n
+e CAM_Part1 0.2473789156 140.1928576 CamWait 0.0 109.619372 1 n
+e CAM_Part3 0.2491084545 103.0353845 CamWait 0.504483405 127.6062838 1 n
+e CAM_Part2 0.9388818017 233.4429059 CamWait 0.0156030157 232.563857 1 n
+h Camera
+
+

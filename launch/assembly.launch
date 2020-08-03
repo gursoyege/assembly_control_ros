@@ -1,0 +1,21 @@
+<launch>
+  <arg name="vrep_ip" default="127.0.0.1"/>
+
+  <node name="vrep_interface" pkg="assembly_control_ros" type="vrep" output="screen">
+  <param name="vrep_ip" value="$(arg vrep_ip)" />
+  </node>
+  
+  <node name="supply_conveyor_init" pkg="rostopic" type="rostopic" args='pub /supply_conveyor/command assembly_control_ros/supply_conveyor_command "true" --once'/>
+  <node name="evacuation_conveyor_init" pkg="rostopic" type="rostopic" args='pub /evacuation_conveyor/command assembly_control_ros/evacuation_conveyor_command "true" --once'/>
+
+  <node name="supply_conveyor" pkg="assembly_control_ros" type="supply_conveyor" output="screen" />
+  <node name="camera" pkg="assembly_control_ros" type="camera" output="screen" />
+
+  <node name="evacuation_conveyor" pkg="assembly_control_ros" type="evacuation_conveyor" output="screen" />
+  <node name="assembly_station" pkg="assembly_control_ros" type="assembly_station" output="screen" />
+  <node name="robot" pkg="assembly_control_ros" type="robot" output="screen" />
+  <node name="controller" pkg="assembly_control_ros" type="controller" output="screen" />
+
+  <!-- Add your other control nodes here -->
+
+</launch>

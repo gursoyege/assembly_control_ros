@@ -1,0 +1,2 @@
+bool valid
+bool evacuated

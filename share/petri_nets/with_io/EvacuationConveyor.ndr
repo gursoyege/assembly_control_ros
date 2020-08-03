@@ -1,0 +1,21 @@
+p 45.0 415.0 EC_On 0 n IN s
+t 135.0 415.0 t18 0 w n
+p 40.0 140.0 EC_CanStop 0 n IN s
+p 45.0 275.0 EC_Stopped 0 n OUT s
+t 135.0 140.0 t16 0 w n
+p 135.0 205.0 EC_Stopping 0 w
+p 135.0 50.0 EC_ON 1 n
+t 135.0 275.0 {EC_Stopped } ne 0 w n EC_STOPPED e
+p 135.0 350.0 EC_Off 0 w
+e t18 0.09048349085 50.71493709 EC_ON 0.9119404711 47.44133442 1 n
+e EC_On t18 1 n
+e EC_Off t18 1 n
+e EC_CanStop t16 1 n
+e EC_ON t16 1 n
+e {EC_Stopped } EC_Off 1 n
+e EC_Stopping {EC_Stopped } 1 n
+e t16 EC_Stopping 1 n
+e {EC_Stopped } EC_Stopped 1 n
+h robot_FF1v2222
+
+

@@ -1,0 +1,8 @@
+bool part_grasped
+bool part_released
+bool at_supply_conveyor
+bool at_evacuation_conveyor
+bool at_assembly_station
+bool part1_assembled
+bool part2_assembled
+bool part3_assembled

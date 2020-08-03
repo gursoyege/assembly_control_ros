@@ -1,0 +1,21 @@
+p 175.0 50.0 AS_Checking 0 n
+t 250.0 50.0 AS_Valid n 0 w n AS_VALID s
+p 320.0 50.0 AS_Evacuation 0 n
+t 85.0 50.0 t111 0 w n
+t 390.0 50.0 As_Evacuated n 0 w n AS_EVACUATED e
+p 85.0 105.0 AS_Check 0 w IN e
+t 390.0 155.0 t44 0 w n
+p 240.0 140.0 AS_Ready 1 n
+p 390.0 105.0 AS_Evacuated 0 w OUT e
+e As_Evacuated AS_Ready 1 n
+e AS_Evacuated t44 1 n
+e AS_Valid AS_Evacuation 1 n
+e AS_Evacuation As_Evacuated 1 n
+e AS_Check t111 1 n
+e As_Evacuated AS_Evacuated 1 n
+e AS_Checking AS_Valid 1 n
+e t111 AS_Checking 1 n
+e AS_Ready t111 1 n
+h robot_FF1v222
+
+

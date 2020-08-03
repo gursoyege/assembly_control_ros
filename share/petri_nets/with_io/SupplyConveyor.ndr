@@ -1,0 +1,15 @@
+t 190.0 50.0 t22 0 w n
+t 190.0 190.0 SC_On w 0 w n SC_ON e
+p 190.0 280.0 SC_PartAvailable 0 w OUT s
+p 110.0 120.0 {SC_On } 1 w SC_ON e
+p 265.0 125.0 Sc_Off 0 e
+p 45.0 50.0 SC_Restart 0 n IN sw
+e SC_Restart t22 1 n
+e SC_On SC_PartAvailable 1 n
+e t22 {SC_On } 1 n
+e Sc_Off t22 1 n
+e SC_On Sc_Off 1 n
+e {SC_On } SC_On 1 n
+h robot_FF1v222
+
+
